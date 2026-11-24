@@ -65,3 +65,12 @@ body.portfolio {
 .showcase-link:hover { border-color: var(--accent); }
 .showcase-link:hover .showcase-action { color: var(--accent); }
 .showcase-note { margin-top: .5rem; color: var(--muted); font-size: .9rem; }
+
+.preview.trading {
+  --ink: #a66bff;
+  --panel: #151119;
+  background: linear-gradient(115deg, #151119, #050506 60%, #241124);
+  box-shadow: inset 0 0 0 1px #2b2235;
+}
+.trading .preview-title { color: #d9c4ff; }
+.trading .chart i { background: linear-gradient(90deg, var(--ink), #d13aa9); }
