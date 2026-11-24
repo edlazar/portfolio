@@ -55,3 +55,13 @@ body.portfolio {
   .project { grid-template-columns: 1fr; }
   .project-heading p { margin-top: .25rem; }
 }
+
+.showcase { margin: 0 0 3rem; }
+.showcase h2 { margin-bottom: .9rem; }
+.showcase-link { display: block; border: 1px solid var(--line); border-radius: .85rem; overflow: hidden; text-decoration: none; }
+.showcase-link .preview { border-radius: 0; padding: clamp(.85rem, 2.5vw, 1.5rem); }
+.showcase-link .preview-body { min-height: clamp(8rem, 24vw, 16rem); }
+.showcase-action { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .8rem 1rem; font-weight: 700; }
+.showcase-link:hover { border-color: var(--accent); }
+.showcase-link:hover .showcase-action { color: var(--accent); }
+.showcase-note { margin-top: .5rem; color: var(--muted); font-size: .9rem; }
