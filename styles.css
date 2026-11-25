@@ -157,3 +157,26 @@ body.portfolio {
 .workout-preview .workout-format { margin-top: .25rem; color: var(--ink); font-weight: 700; }
 .workout-preview ol { margin: .55rem 0 0; padding-inline-start: 1.3em; }
 .workout-preview li + li { margin-top: .22rem; }
+
+/* Project pages share the homepage's portfolio theme. */
+.portfolio.project-page .lead {
+  max-width: 46rem;
+  font-size: clamp(1.2rem, 2.4vw, 2rem);
+}
+.project-page .showcase,
+.project-page .detail {
+  border-top: 1px solid var(--line);
+  padding-top: clamp(1rem, 2.7vw, 2.4rem);
+}
+.project-page .showcase h2,
+.project-page .detail h2 {
+  font-size: clamp(1.65rem, 3vw, 2.8rem);
+}
+.project-page .showcase-action {
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+}
+.project-page .showcase-link:hover .showcase-action {
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
