@@ -2,16 +2,33 @@
 body.portfolio {
   color-scheme: light;
   --bg: #fcfcff;
-  --fg: #101bb8;
-  --muted: #323b87;
-  --accent: #1828d0;
-  --line: #2634d3;
+  --fg: #111318;
+  --muted: #494e5c;
+  --accent: #101bb8;
+  --line: #101bb8;
   font-family: Inter, "Helvetica Neue", system-ui, sans-serif;
 }
 .portfolio .wrap { width: min(100% - clamp(2rem, 7vw, 6rem), 85rem); }
 .portfolio header { padding: 0; }
 .portfolio header .wrap { padding: 1rem 0; border-bottom: 1px solid var(--line); }
 .portfolio header a { font-weight: 750; }
+.portfolio header a:not(.brand),
+.portfolio .work > h2,
+.portfolio .showcase h2,
+.portfolio .detail h2,
+.portfolio .showcase-action,
+.portfolio .hero-period { color: var(--accent); }
+.portfolio .home-hero {
+  padding-block: clamp(3rem, 9vw, 7rem) clamp(3.5rem, 10vw, 8rem);
+}
+.portfolio .home-hero h1 {
+  font-size: clamp(2.45rem, 11.3vw, 9rem);
+  line-height: 1.06;
+  letter-spacing: -.065em;
+}
+@media (min-width: 900px) {
+  .home-hero .hero-line { display: block; }
+}
 .portfolio .hero { padding: clamp(2.5rem, 5vw, 5rem) 0 clamp(3rem, 6vw, 5.5rem); }
 .portfolio h1 { font-size: clamp(3rem, 8.1vw, 8rem); }
 .portfolio .lead { margin-top: .45rem; max-width: none; font-size: clamp(1.2rem, 3.3vw, 3.3rem); color: var(--fg); letter-spacing: -.045em; }
