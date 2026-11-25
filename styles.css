@@ -88,49 +88,59 @@ body.portfolio {
 }
 .skip-link:focus { transform: translateY(0); }
 
-/* Trading Strategy Research project showcase */
+/* Price Action Futures System preview */
 .preview.research {
-  --ink: #d1d4dc;
-  --panel: #131722;
-  background: #0b0e14;
+  --ink: #dbe3f3;
+  background: linear-gradient(135deg, #151c29, #0b0e14);
+  border: 1px solid #455773;
   color: var(--ink);
+  container-type: inline-size;
 }
-.research .preview-title { color: var(--ink); }
-.research .preview-body > div { border: 1px solid #2a2e39; }
-.research .bars {
-  background-image: linear-gradient(to right, #2a2e39 1px, transparent 1px),
-    linear-gradient(to bottom, #2a2e39 1px, transparent 1px);
-  background-size: 24px 24px;
-  align-items: center;
-  padding: 12px;
+.research .preview-title {
+  padding-inline-start: .55rem;
+  border-inline-start: 3px solid #2962ff;
 }
-.research .bars i {
-  --candle: #26a69a;
+.research-workflow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: clamp(.6rem, 3cqi, 1.6rem);
+  margin: 0;
+  padding: clamp(.5rem, 3cqi, 1.8rem) 0;
+  list-style: none;
+}
+.research-workflow li {
+  --step-color: #65aaff;
   position: relative;
-  height: clamp(8px, 3vw, 32px);
-  transform: translateY(calc(2.5rem - var(--bar) * .85));
-  background: var(--candle);
-  border-radius: 2px;
-}
-.research .bars i:nth-child(3n) { --candle: #ef5350; }
-.research .bars i::before {
-  content: "";
-  position: absolute;
-  inset: -5px auto -5px 50%;
-  width: 1px;
-  background: var(--candle);
-}
-.research .data { gap: .4rem; padding: .55rem; }
-.research .data span {
-  border: 1px solid #363e50;
-  border-radius: .4rem;
-  padding: .35rem .45rem;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: .25rem;
+  min-height: 4rem;
+  padding: .35rem .15rem;
+  border: 1px solid var(--step-color);
+  border-radius: .6rem;
+  background: #192230;
+  color: #f3f6fd;
+  text-align: center;
+  font-size: clamp(.7rem, 3.2cqi, 1.2rem);
+  font-weight: 700;
+  line-height: 1.2;
   overflow-wrap: anywhere;
 }
-.research .data span:first-child {
-  background: #2962ff;
-  border-color: #2962ff;
-  color: #fff;
+.research-workflow li:nth-child(2) { --step-color: #2cd5c3; }
+.research-workflow li:nth-child(3) { --step-color: #ff6a70; }
+.workflow-icon { color: var(--step-color); font-size: 1.8em; line-height: 1; }
+.research-workflow li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 100%;
+  top: 50%;
+  width: clamp(.6rem, 3cqi, 1.6rem);
+  height: .6rem;
+  transform: translateY(-50%);
+  background: #528cff;
+  clip-path: polygon(0 38%, 63% 38%, 63% 0, 100% 50%, 63% 100%, 63% 62%, 0 62%);
 }
 
 /* Short Circuit workout preview */
