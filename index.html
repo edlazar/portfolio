@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Ed Lazarchuk | Portfolio</title>
   <meta name="description" content="Tools for trading, training, and the web — projects by Ed Lazarchuk.">
   <link rel="canonical" href="https://edlazarchuk.com/">
@@ -10,182 +10,221 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <script src="/canvas.js" defer></script>
 </head>
-<body class="portfolio floating-canvas">
+<body class="portfolio editorial-home">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="canvas-header">
-    <a class="wordmark reveal-item" style="--reveal-delay: 0ms" href="/">Ed Lazarchuk</a>
+  <header class="site-header">
+    <div class="editorial-wrap header-bar">
+      <a class="wordmark" href="/">Ed Lazarchuk</a>
+      <span class="header-meta" aria-hidden="true">04 Tools</span>
+    </div>
   </header>
 
-  <main id="main-content" class="canvas-split" tabindex="-1">
-    <div class="canvas-left">
-      <h1 class="canvas-headline">
-        <span class="headline-line reveal-item" style="--reveal-delay: 70ms">Tools for trading,</span>
-        <span class="headline-line reveal-item" style="--reveal-delay: 140ms">training, and the web.</span>
-      </h1>
-    </div>
+  <main id="main-content" class="editorial-wrap" tabindex="-1">
+    <section class="editorial-hero">
+      <h1 class="editorial-headline reveal-item" style="--reveal-delay: 0ms">Tools for trading, training, and the web.</h1>
+    </section>
 
-    <div class="canvas-right" id="projects">
-      <nav class="index-nav" aria-label="Projects">
-        <ol class="index-list" role="list" id="index-list">
-          <li class="index-group reveal-item" style="--reveal-delay: 200ms" data-category="trading">
-            <button
-              type="button"
-              class="index-row index-toggle"
-              id="index-trading"
-              aria-expanded="false"
-              aria-controls="trading-sublist"
-              data-preview="trading"
-            >
-              <span class="index-num" aria-hidden="true">01</span>
-              <span class="index-label">Trading</span>
-              <span class="index-mobile-hint" aria-hidden="true">2 tools</span>
-              <span class="index-indicator-icon" aria-hidden="true">
-                <svg viewBox="0 0 12 12" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                  <path class="icon-h" d="M2.5 6h7"/>
-                  <path class="icon-v" d="M6 2.5v7"/>
-                </svg>
-              </span>
-            </button>
-            <div class="index-sublist-panel" id="trading-sublist" hidden>
-              <div class="index-sublist-inner">
-                <ul class="index-sublist" role="list">
-                  <li>
-                    <a
-                      class="index-sublink"
-                      href="/projects/trading-strategy-research"
-                      data-preview="trading-research"
-                    >
-                      <span class="sublink-text">Price Action Futures System</span>
-                      <span class="sublink-arrow" aria-hidden="true">↗</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="index-sublink"
-                      href="/projects/traders-dashboard"
-                      data-preview="traders-dashboard"
-                    >
-                      <span class="sublink-text">Traders Dashboard</span>
-                      <span class="sublink-arrow" aria-hidden="true">↗</span>
-                    </a>
-                  </li>
-                </ul>
+    <section class="projects-section" id="projects" aria-labelledby="projects-heading">
+      <div class="section-bar reveal-item" style="--reveal-delay: 70ms">
+        <h2 id="projects-heading">Selected Work</h2>
+        <span class="section-legend" aria-hidden="true">Trading · Training · Web</span>
+      </div>
+
+      <div class="project-grid">
+        <!-- 01 · Trading · Price Action Futures System -->
+        <article class="project-card reveal-item" style="--reveal-delay: 110ms">
+          <div class="media" aria-hidden="true">
+            <div class="ui-stage ui-playbook">
+              <div class="ui-bar">
+                <span class="ui-bar-title">Playbook Map</span>
+                <span class="ui-bar-pill">R:R 1:2.5</span>
+              </div>
+              <ol class="ui-steps">
+                <li class="ui-step">
+                  <span class="ui-step-num">01</span>
+                  <span class="ui-step-name">Prep</span>
+                </li>
+                <li class="ui-step is-active">
+                  <span class="ui-step-num">02</span>
+                  <span class="ui-step-name">Setup</span>
+                </li>
+                <li class="ui-step">
+                  <span class="ui-step-num">03</span>
+                  <span class="ui-step-name">Risk</span>
+                </li>
+                <li class="ui-step">
+                  <span class="ui-step-num">04</span>
+                  <span class="ui-step-name">Exec</span>
+                </li>
+              </ol>
+              <div class="ui-rule-bar">
+                <span>Structure · Key Level · Size</span>
+                <span class="ui-dot"></span>
               </div>
             </div>
-          </li>
+          </div>
 
-          <li class="index-group reveal-item" style="--reveal-delay: 260ms" data-category="training">
-            <a
-              class="index-row"
-              id="index-training"
-              href="/projects/woded"
-              data-preview="training"
-            >
-              <span class="index-num" aria-hidden="true">02</span>
-              <span class="index-label">Training</span>
-              <span class="index-mobile-hint" aria-hidden="true">WODed ↗</span>
-            </a>
-          </li>
+          <header class="card-header">
+            <div class="card-meta">
+              <span class="card-index" aria-hidden="true">01</span>
+              <span class="card-category">Trading</span>
+            </div>
+            <h3>
+              <a class="card-link" href="/projects/trading-strategy-research">Price Action Futures System</a>
+            </h3>
+          </header>
 
-          <li class="index-group reveal-item" style="--reveal-delay: 320ms" data-category="web">
-            <a
-              class="index-row"
-              id="index-web"
-              href="/whop-downloader"
-              data-preview="web"
-            >
-              <span class="index-num" aria-hidden="true">03</span>
-              <span class="index-label">Web</span>
-              <span class="index-mobile-hint" aria-hidden="true">Whop Downloader ↗</span>
-            </a>
-          </li>
-        </ol>
-      </nav>
+          <p class="card-desc">A step-by-step price action playbook for reading futures structure, setups, position sizing, and execution.</p>
 
-      <div class="preview-stage" aria-hidden="true">
-        <div class="floating-card" id="floating-card" data-visible="false">
-          <span class="floating-card-caret"></span>
-          <div class="floating-card-body" id="floating-card-body"></div>
-        </div>
+          <footer class="card-footer">
+            <span class="card-kind">Playbook</span>
+            <span class="card-cta" aria-hidden="true">Open <span class="cta-arrow">↗</span></span>
+          </footer>
+        </article>
+
+        <!-- 02 · Trading · Traders Dashboard -->
+        <article class="project-card reveal-item" style="--reveal-delay: 165ms">
+          <div class="media" aria-hidden="true">
+            <div class="ui-stage ui-dashboard">
+              <div class="ui-bar">
+                <span class="ui-bar-title">Equity Curve</span>
+                <span class="ui-bar-stat">+14.2R</span>
+              </div>
+              <svg class="ui-chart" viewBox="0 0 260 66" fill="none" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="eq-fill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1D4ED8" stop-opacity="0.14"/>
+                    <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <line x1="0" y1="54" x2="260" y2="54" stroke="#E5E7EB" stroke-width="1"/>
+                <line x1="0" y1="30" x2="260" y2="30" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="3 4"/>
+                <path d="M2 54 L34 44 L62 48 L98 31 L130 35 L168 18 L200 23 L234 10 L256 12 L256 64 L2 64 Z" fill="url(#eq-fill)"/>
+                <path d="M2 54 L34 44 L62 48 L98 31 L130 35 L168 18 L200 23 L234 10 L256 12" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="256" cy="12" r="3.5" fill="#1D4ED8"/>
+              </svg>
+              <div class="ui-chips">
+                <span>NQ · Nasdaq</span>
+                <span>ES · S&amp;P 500</span>
+                <span>Risk Lab</span>
+              </div>
+            </div>
+          </div>
+
+          <header class="card-header">
+            <div class="card-meta">
+              <span class="card-index" aria-hidden="true">02</span>
+              <span class="card-category">Trading</span>
+            </div>
+            <h3>
+              <a class="card-link" href="/projects/traders-dashboard">Traders Dashboard</a>
+            </h3>
+          </header>
+
+          <p class="card-desc">Futures trading analytics for reviewing daily performance, trade snapshots, and Risk Lab sizing simulations.</p>
+
+          <footer class="card-footer">
+            <span class="card-kind">Analytics</span>
+            <span class="card-cta" aria-hidden="true">Open <span class="cta-arrow">↗</span></span>
+          </footer>
+        </article>
+
+        <!-- 03 · Training · WODed -->
+        <article class="project-card reveal-item" style="--reveal-delay: 220ms">
+          <div class="media" aria-hidden="true">
+            <div class="ui-stage ui-woded">
+              <div class="ui-bar">
+                <span class="ui-bar-title">Short Circuit</span>
+                <span class="ui-bar-pill is-cobalt">EMOM · 5 Rds</span>
+              </div>
+              <div class="ui-wod-grid">
+                <div class="ui-timer-box">
+                  <span class="ui-timer-label">Clock</span>
+                  <span class="ui-timer-val">08:24</span>
+                </div>
+                <ul class="ui-wod-list">
+                  <li>15/12 cal row</li>
+                  <li>15 KB swings</li>
+                  <li>15 ring dips</li>
+                </ul>
+              </div>
+              <div class="ui-rule-bar">
+                <span>20 min · Rx / Fx / Scaled</span>
+                <span class="ui-dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <header class="card-header">
+            <div class="card-meta">
+              <span class="card-index" aria-hidden="true">03</span>
+              <span class="card-category">Training</span>
+            </div>
+            <h3>
+              <a class="card-link" href="/projects/woded">WODed</a>
+            </h3>
+          </header>
+
+          <p class="card-desc">Daily workouts with Rx, Fx, and Scaled options, built-in EMOM &amp; AMRAP timers, and a personal training log.</p>
+
+          <footer class="card-footer">
+            <span class="card-kind">Workout App</span>
+            <span class="card-cta" aria-hidden="true">Open <span class="cta-arrow">↗</span></span>
+          </footer>
+        </article>
+
+        <!-- 04 · Web · Whop Downloader -->
+        <article class="project-card reveal-item" style="--reveal-delay: 275ms">
+          <div class="media" aria-hidden="true">
+            <div class="ui-stage ui-extension">
+              <div class="ui-video-frame">
+                <span class="ui-play-btn">
+                  <svg viewBox="0 0 14 14" width="12" height="12" fill="currentColor">
+                    <path d="M3 2.2v9.6L11.5 7 3 2.2z"/>
+                  </svg>
+                </span>
+                <div class="ui-video-scrub">
+                  <span class="ui-video-progress"></span>
+                </div>
+              </div>
+              <div class="ui-ext-bar">
+                <span class="ui-ext-status">
+                  <span class="ui-dot"></span>
+                  Video detected
+                </span>
+                <span class="ui-ext-btn">↓ Download</span>
+              </div>
+            </div>
+          </div>
+
+          <header class="card-header">
+            <div class="card-meta">
+              <span class="card-index" aria-hidden="true">04</span>
+              <span class="card-category">Web</span>
+            </div>
+            <h3>
+              <a class="card-link" href="/whop-downloader">Whop Downloader</a>
+            </h3>
+          </header>
+
+          <p class="card-desc">A Chrome extension that automatically detects supported videos on Whop and adds a one-click download button.</p>
+
+          <footer class="card-footer">
+            <span class="card-kind">Chrome Extension</span>
+            <span class="card-cta" aria-hidden="true">Open <span class="cta-arrow">↗</span></span>
+          </footer>
+        </article>
       </div>
-    </div>
+    </section>
   </main>
 
-  <!-- Preview card templates (declarative, zero innerHTML string building) -->
-  <template id="tpl-preview-trading">
-    <div class="fc-eyebrow">01 · Trading · 2 tools</div>
-    <div class="fc-title">Trading Tools</div>
-    <p class="fc-desc">Price action playbook and futures analytics for NQ &amp; ES execution.</p>
-    <div class="fc-snippet fc-snippet-stack">
-      <div class="fc-mini-row">
-        <span class="fc-mini-dot"></span>
-        <span class="fc-mini-name">Price Action Playbook</span>
-      </div>
-      <div class="fc-mini-row">
-        <span class="fc-mini-dot fc-mini-dot-muted"></span>
-        <span class="fc-mini-name">Traders Dashboard</span>
-      </div>
+  <footer class="site-footer">
+    <div class="editorial-wrap footer-bar">
+      <span>Ed Lazarchuk</span>
+      <span class="footer-domain">edlazarchuk.com</span>
     </div>
-  </template>
-
-  <template id="tpl-preview-trading-research">
-    <div class="fc-eyebrow">Trading Research</div>
-    <div class="fc-title">Price Action Futures System</div>
-    <p class="fc-desc">Step-by-step playbook for futures setups, position sizing, and execution.</p>
-    <div class="fc-snippet fc-snippet-steps">
-      <span class="fc-step is-highlight">Prep</span>
-      <span class="fc-step">Setup</span>
-      <span class="fc-step">Risk</span>
-      <span class="fc-step">Exec</span>
-    </div>
-  </template>
-
-  <template id="tpl-preview-traders-dashboard">
-    <div class="fc-eyebrow">Trading Performance</div>
-    <div class="fc-title">Traders Dashboard</div>
-    <p class="fc-desc">Daily trade summaries, performance curves, and Risk Lab sizing.</p>
-    <div class="fc-snippet fc-snippet-chart">
-      <svg class="fc-sparkline" viewBox="0 0 180 42" fill="none" aria-hidden="true">
-        <line x1="0" y1="34" x2="180" y2="34" stroke="#E5E7EB" stroke-width="1"/>
-        <line x1="0" y1="18" x2="180" y2="18" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="2 3"/>
-        <path d="M2 35 L24 27 L42 30 L68 19 L92 22 L120 11 L142 15 L164 6 L178 8" stroke="#1D4ED8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="178" cy="8" r="2.5" fill="#1D4ED8"/>
-      </svg>
-      <div class="fc-chip-row">
-        <span>NQ</span>
-        <span>ES</span>
-        <span>Risk Lab</span>
-      </div>
-    </div>
-  </template>
-
-  <template id="tpl-preview-training">
-    <div class="fc-eyebrow">02 · WODed</div>
-    <div class="fc-title">Training Tools</div>
-    <p class="fc-desc">Daily workouts, EMOM &amp; AMRAP timers, and personal training log.</p>
-    <div class="fc-snippet fc-snippet-wod">
-      <div class="fc-wod-top">
-        <span class="fc-wod-name">Short Circuit</span>
-        <span class="fc-wod-clock">20:00</span>
-      </div>
-      <div class="fc-wod-meta">EMOM · 5 rounds · Rx / Fx</div>
-    </div>
-  </template>
-
-  <template id="tpl-preview-web">
-    <div class="fc-eyebrow">03 · Chrome Extension</div>
-    <div class="fc-title">Whop Downloader</div>
-    <p class="fc-desc">Detects supported Whop videos and adds a one-click download button.</p>
-    <div class="fc-snippet fc-snippet-ext">
-      <span class="fc-ext-status">
-        <span class="fc-ext-dot"></span>
-        Video detected
-      </span>
-      <span class="fc-ext-pill">↓ Download</span>
-    </div>
-  </template>
+  </footer>
 </body>
 </html>
