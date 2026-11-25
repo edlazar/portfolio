@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/trading-strategy-research",
-      "destination": "https://trading-strategy-research.vercel.app/Trading_Techniques_Playbook_Mind_Map.html"
+      "destination": "https://trading-strategy-research.vercel.app/"
     }
   ]
 }
