@@ -48,7 +48,6 @@ body.portfolio {
 .timer small { color: var(--ink); }
 .extension { --ink: #e0baff; --panel: #2b213a; background: #1b1427; }
 .video { display: grid; place-content: center; font-size: 1.8rem; color: var(--ink); }
-.research { --ink: #aac4ff; --panel: #202c50; background: #121a34; }
 .bars { display: flex; gap: 5%; align-items: end; padding: .75rem; }
 .bars i { flex: 1; height: var(--bar); min-height: .25rem; background: var(--ink); border-radius: .18rem .18rem 0 0; }
 @media (max-width: 620px) {
@@ -90,22 +89,22 @@ body.portfolio {
 .skip-link:focus { transform: translateY(0); }
 
 /* Trading Strategy Research project showcase */
-.showcase-link .preview.research {
+.preview.research {
   --ink: #d1d4dc;
   --panel: #131722;
   background: #0b0e14;
   color: var(--ink);
 }
-.showcase-link .research .preview-title { color: var(--ink); }
-.showcase-link .research .preview-body > div { border: 1px solid #2a2e39; }
-.showcase-link .research .bars {
+.research .preview-title { color: var(--ink); }
+.research .preview-body > div { border: 1px solid #2a2e39; }
+.research .bars {
   background-image: linear-gradient(to right, #2a2e39 1px, transparent 1px),
     linear-gradient(to bottom, #2a2e39 1px, transparent 1px);
   background-size: 24px 24px;
   align-items: center;
   padding: 12px;
 }
-.showcase-link .research .bars i {
+.research .bars i {
   --candle: #26a69a;
   position: relative;
   height: clamp(8px, 3vw, 32px);
@@ -113,23 +112,38 @@ body.portfolio {
   background: var(--candle);
   border-radius: 2px;
 }
-.showcase-link .research .bars i:nth-child(3n) { --candle: #ef5350; }
-.showcase-link .research .bars i::before {
+.research .bars i:nth-child(3n) { --candle: #ef5350; }
+.research .bars i::before {
   content: "";
   position: absolute;
   inset: -5px auto -5px 50%;
   width: 1px;
   background: var(--candle);
 }
-.showcase-link .research .data { gap: .4rem; padding: .55rem; }
-.showcase-link .research .data span {
+.research .data { gap: .4rem; padding: .55rem; }
+.research .data span {
   border: 1px solid #363e50;
   border-radius: .4rem;
   padding: .35rem .45rem;
   overflow-wrap: anywhere;
 }
-.showcase-link .research .data span:first-child {
+.research .data span:first-child {
   background: #2962ff;
   border-color: #2962ff;
   color: #fff;
 }
+
+/* Short Circuit workout preview */
+.training .workout-preview {
+  padding: clamp(.7rem, 2vw, 1.15rem);
+  border: 1px solid #454545;
+  border-radius: .6rem;
+  background: #1c1c1c;
+  color: #f5f5f5;
+  font-size: clamp(.82rem, 1.5vw, 1.05rem);
+  line-height: 1.4;
+}
+.workout-preview strong { display: block; font-size: 1.18em; }
+.workout-preview .workout-format { margin-top: .25rem; color: var(--ink); font-weight: 700; }
+.workout-preview ol { margin: .55rem 0 0; padding-inline-start: 1.3em; }
+.workout-preview li + li { margin-top: .22rem; }
