@@ -74,3 +74,17 @@ body.portfolio {
 }
 .trading .preview-title { color: #d9c4ff; }
 .trading .chart i { background: linear-gradient(90deg, var(--ink), #d13aa9); }
+
+.skip-link {
+  position: fixed;
+  inset-block-start: 1rem;
+  inset-inline-start: 1rem;
+  z-index: 10;
+  padding: .65rem 1rem;
+  border-radius: .35rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-weight: 700;
+  transform: translateY(calc(-100% - 2rem));
+}
+.skip-link:focus { transform: translateY(0); }
