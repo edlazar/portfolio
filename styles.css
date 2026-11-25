@@ -88,3 +88,48 @@ body.portfolio {
   transform: translateY(calc(-100% - 2rem));
 }
 .skip-link:focus { transform: translateY(0); }
+
+/* Trading Strategy Research project showcase */
+.showcase-link .preview.research {
+  --ink: #d1d4dc;
+  --panel: #131722;
+  background: #0b0e14;
+  color: var(--ink);
+}
+.showcase-link .research .preview-title { color: var(--ink); }
+.showcase-link .research .preview-body > div { border: 1px solid #2a2e39; }
+.showcase-link .research .bars {
+  background-image: linear-gradient(to right, #2a2e39 1px, transparent 1px),
+    linear-gradient(to bottom, #2a2e39 1px, transparent 1px);
+  background-size: 24px 24px;
+  align-items: center;
+  padding: 12px;
+}
+.showcase-link .research .bars i {
+  --candle: #26a69a;
+  position: relative;
+  height: clamp(8px, 3vw, 32px);
+  transform: translateY(calc(2.5rem - var(--bar) * .85));
+  background: var(--candle);
+  border-radius: 2px;
+}
+.showcase-link .research .bars i:nth-child(3n) { --candle: #ef5350; }
+.showcase-link .research .bars i::before {
+  content: "";
+  position: absolute;
+  inset: -5px auto -5px 50%;
+  width: 1px;
+  background: var(--candle);
+}
+.showcase-link .research .data { gap: .4rem; padding: .55rem; }
+.showcase-link .research .data span {
+  border: 1px solid #363e50;
+  border-radius: .4rem;
+  padding: .35rem .45rem;
+  overflow-wrap: anywhere;
+}
+.showcase-link .research .data span:first-child {
+  background: #2962ff;
+  border-color: #2962ff;
+  color: #fff;
+}
