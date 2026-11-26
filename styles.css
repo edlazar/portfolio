@@ -1270,12 +1270,15 @@ body.editorial-home {
     transform-origin: 12px 5.5px;
   }
 
-  /* Trigger on hover, keyboard focus-visible, active switcher item, and project hero entrance */
+  /* Trigger on hover, cursor proximity, keyboard focus-visible, active item, and project hero */
   .project-card:has(.card-link:hover) .icon-candlesticks .candle-left,
   .project-card:has(.card-link:focus-visible) .icon-candlesticks .candle-left,
   .switcher-item:hover .icon-candlesticks .candle-left,
   .switcher-item:focus-visible .icon-candlesticks .candle-left,
   .switcher-item[aria-current="page"] .icon-candlesticks .candle-left,
+  .dock-btn[data-near="true"] .icon-candlesticks .candle-left,
+  .dock-btn:hover .icon-candlesticks .candle-left,
+  .dock-btn:focus-visible .icon-candlesticks .candle-left,
   .hero-icon .icon-candlesticks .candle-left {
     animation: candle-left-pulse 640ms cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -1285,6 +1288,9 @@ body.editorial-home {
   .switcher-item:hover .icon-candlesticks .candle-right,
   .switcher-item:focus-visible .icon-candlesticks .candle-right,
   .switcher-item[aria-current="page"] .icon-candlesticks .candle-right,
+  .dock-btn[data-near="true"] .icon-candlesticks .candle-right,
+  .dock-btn:hover .icon-candlesticks .candle-right,
+  .dock-btn:focus-visible .icon-candlesticks .candle-right,
   .hero-icon .icon-candlesticks .candle-right {
     animation: candle-right-pulse 640ms cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -1294,6 +1300,9 @@ body.editorial-home {
   .switcher-item:hover .icon-trend .trend-line,
   .switcher-item:focus-visible .icon-trend .trend-line,
   .switcher-item[aria-current="page"] .icon-trend .trend-line,
+  .dock-btn[data-near="true"] .icon-trend .trend-line,
+  .dock-btn:hover .icon-trend .trend-line,
+  .dock-btn:focus-visible .icon-trend .trend-line,
   .hero-icon .icon-trend .trend-line {
     stroke-dasharray: 20;
     animation: trend-draw 560ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -1304,6 +1313,9 @@ body.editorial-home {
   .switcher-item:hover .icon-kettlebell .kb-body,
   .switcher-item:focus-visible .icon-kettlebell .kb-body,
   .switcher-item[aria-current="page"] .icon-kettlebell .kb-body,
+  .dock-btn[data-near="true"] .icon-kettlebell .kb-body,
+  .dock-btn:hover .icon-kettlebell .kb-body,
+  .dock-btn:focus-visible .icon-kettlebell .kb-body,
   .hero-icon .icon-kettlebell .kb-body {
     animation: kettlebell-swing 660ms cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -1313,10 +1325,169 @@ body.editorial-home {
   .switcher-item:hover .icon-download .dl-arrow,
   .switcher-item:focus-visible .icon-download .dl-arrow,
   .switcher-item[aria-current="page"] .icon-download .dl-arrow,
+  .dock-btn[data-near="true"] .icon-download .dl-arrow,
+  .dock-btn:hover .icon-download .dl-arrow,
+  .dock-btn:focus-visible .icon-download .dl-arrow,
   .hero-icon .icon-download .dl-arrow {
     animation: download-drop 560ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
+
+/* ==========================================================================
+   Top-Right Header Icon Switcher Dock (Cursor-Proximity Animated)
+   ========================================================================== */
+
+.portfolio header .header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.portfolio .header-tools {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-inline-size: 0;
+}
+
+.portfolio header .header-projects-link {
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.portfolio header .header-projects-link:hover,
+.portfolio header .header-projects-link:focus-visible {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.portfolio .icon-dock {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.portfolio header .icon-dock .dock-btn {
+  --prox: 0;
+  --mag-x: 0px;
+  --mag-y: 0px;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  inline-size: 36px;
+  block-size: 36px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--fg);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .portfolio header .icon-dock .dock-btn {
+    transform: translate3d(
+      var(--mag-x),
+      calc(var(--mag-y) + (var(--prox) * -3px)),
+      0
+    ) scale(calc(1 + var(--prox) * 0.16));
+    transition:
+      transform 140ms cubic-bezier(0.16, 1, 0.3, 1),
+      color 180ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease,
+      box-shadow 180ms ease;
+    will-change: transform;
+  }
+}
+
+.portfolio header .icon-dock .dock-btn[data-near="true"],
+.portfolio header .icon-dock .dock-btn:hover,
+.portfolio header .icon-dock .dock-btn:focus-visible {
+  color: var(--accent);
+  border-color: rgba(29, 78, 216, 0.4);
+  background: rgba(29, 78, 216, 0.05);
+  box-shadow: 0 6px 16px -8px rgba(29, 78, 216, 0.3);
+  text-decoration: none;
+}
+
+.portfolio header .icon-dock .dock-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.portfolio header .icon-dock .dock-btn[aria-current="page"] {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(29, 78, 216, 0.08);
+  box-shadow: inset 0 0 0 0.5px var(--accent);
+}
+
+.portfolio header .icon-dock .dock-btn[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  inset-block-end: 3px;
+  inset-inline-start: 50%;
+  inline-size: 10px;
+  block-size: 2px;
+  border-radius: 999px;
+  background: var(--accent);
+  transform: translateX(-50%);
+}
+
+/* Extend touch hit area to >=44px on touch screens without bloating visual spacing */
+@media (pointer: coarse) {
+  .portfolio header .icon-dock .dock-btn::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+  }
+
+  .portfolio header .icon-dock .dock-btn:active {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(29, 78, 216, 0.08);
+  }
+}
+
+@media (max-width: 460px) {
+  .portfolio .header-meta,
+  .portfolio header .header-projects-link {
+    display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .portfolio header .icon-dock {
+    gap: 0.25rem;
+  }
+
+  .portfolio header .icon-dock .dock-btn {
+    inline-size: 32px;
+    block-size: 32px;
+  }
+}
+
+@media (forced-colors: active) {
+  .portfolio header .icon-dock .dock-btn[aria-current="page"] {
+    outline: 2px solid Highlight;
+    outline-offset: -2px;
+  }
+
+  .portfolio header .icon-dock .dock-btn[aria-current="page"]::after {
+    background: Highlight;
+  }
+}
+
 
 
 
