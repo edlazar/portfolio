@@ -1,25 +1,122 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Whop Downloader | Ed Lazarchuk</title>
-<meta name="description" content="A Chrome extension that detects supported videos on Whop and adds a download button next to the player.">
-<link rel="canonical" href="https://edlazarchuk.com/whop-downloader">
-<link rel="stylesheet" href="/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Whop Downloader | Ed Lazarchuk</title>
+  <meta name="description" content="A Chrome extension (Whop Video Saver) that detects supported direct videos and compatible HLS streams on Whop, adds a player download button, and saves via Chrome Downloads.">
+  <link rel="canonical" href="https://edlazarchuk.com/whop-downloader">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="portfolio project-page">
-<a class="skip-link" href="#main-content">Skip to content</a>
-<header><nav class="wrap" aria-label="Main navigation"><a class="brand" href="/">Ed Lazarchuk</a><a href="/#projects">Projects</a></nav></header>
-<main id="main-content" class="wrap" tabindex="-1"><section class="hero"><p class="category">Chrome extension</p><h1>Whop Downloader</h1><p class="lead">A Chrome extension that detects supported videos on Whop and adds a download button next to the player.</p></section>
-<section class="showcase" aria-labelledby="showcase-heading">
-  <h2 id="showcase-heading">App preview</h2>
-  <a class="showcase-link" href="https://github.com/edlazar/Whop-video-downloader">
-    <div class="preview extension" aria-hidden="true"><div class="preview-title">Whop Downloader</div><div class="preview-body"><div class='video'><span>▶</span></div><div class='data'><span>Video detected</span><span>↓ Download video</span></div></div></div>
-    <span class="showcase-action">View extension on GitHub <span aria-hidden="true">↗</span></span>
-  </a>
-</section>
-</main>
-<footer><div class="wrap">Ed Lazarchuk</div></footer>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header>
+    <nav class="wrap" aria-label="Primary">
+      <a class="brand" href="/">Ed Lazarchuk</a>
+      <a href="/#projects">Projects</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="wrap" tabindex="-1">
+    <section class="hero">
+      <p class="category">Chrome extension</p>
+      <h1>Whop Downloader</h1>
+      <p class="lead">A Chrome extension (Whop Video Saver) that automatically detects supported direct videos and compatible HLS streams on Whop, adds a one-click download button next to the player, and saves directly through Chrome Downloads.</p>
+    </section>
+
+    <section class="showcase" aria-labelledby="showcase-heading">
+      <h2 id="showcase-heading">App preview</h2>
+      <a class="showcase-link" href="https://github.com/edlazar/Whop-video-downloader">
+        <div class="suite-preview" aria-hidden="true">
+          <div class="suite-preview-head">
+            <span class="suite-preview-kicker">Whop Video Saver · 4 Core Modules</span>
+            <span class="suite-preview-pill">Detect → Button → Scan → Save</span>
+          </div>
+          <div class="suite-preview-grid">
+            <div class="suite-tile is-live">
+              <div class="suite-tile-head">
+                <span class="suite-tile-num">01</span>
+                <span class="suite-tile-title">Stream Detection</span>
+                <span class="suite-live-dot"></span>
+              </div>
+              <p class="suite-tile-sub">Detects supported direct videos and compatible HLS streams</p>
+              <div class="suite-mini-line"><span>Direct MP4 · HLS Stream</span><span class="is-cobalt">Detected</span></div>
+            </div>
+
+            <div class="suite-tile">
+              <div class="suite-tile-head">
+                <span class="suite-tile-num">02</span>
+                <span class="suite-tile-title">Player Button</span>
+                <span class="suite-tile-badge">In-Page UI</span>
+              </div>
+              <p class="suite-tile-sub">Injects a Download video button right beside the Whop player</p>
+              <div class="suite-mini-line"><span>▶ Player</span><span class="is-cobalt">↓ Download video</span></div>
+            </div>
+
+            <div class="suite-tile">
+              <div class="suite-tile-head">
+                <span class="suite-tile-num">03</span>
+                <span class="suite-tile-title">Tab Scanner</span>
+                <span class="suite-tile-badge">Popup</span>
+              </div>
+              <p class="suite-tile-sub">Open Whop Video Saver from Chrome's toolbar to scan active tabs</p>
+              <div class="suite-mini-line"><span>Scan tab · Pick detected stream</span></div>
+            </div>
+
+            <div class="suite-tile">
+              <div class="suite-tile-head">
+                <span class="suite-tile-num">04</span>
+                <span class="suite-tile-title">Chrome Downloads</span>
+                <span class="suite-tile-badge is-cobalt">↓ Save</span>
+              </div>
+              <p class="suite-tile-sub">Tracks progress and saves files directly in Chrome's manager</p>
+              <div class="suite-mini-line"><code>chrome://downloads</code></div>
+            </div>
+          </div>
+        </div>
+        <span class="showcase-action">View extension on GitHub <span aria-hidden="true">↗</span></span>
+      </a>
+    </section>
+
+    <section class="detail" aria-labelledby="features">
+      <h2 id="features">What it does</h2>
+      <ol class="feature-cards" role="list">
+        <li class="feature-item">
+          <span class="feature-num" aria-hidden="true">01</span>
+          <div class="feature-copy">
+            <h3>Stream Detection</h3>
+            <p>Automatically detects supported direct videos and compatible HLS streams on Whop tabs you have access to without digging through dev tools.</p>
+          </div>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num" aria-hidden="true">02</span>
+          <div class="feature-copy">
+            <h3>In-Player Download Button</h3>
+            <p>Places a clean Download video control right next to the Whop player so you can start saving supported videos in one click.</p>
+          </div>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num" aria-hidden="true">03</span>
+          <div class="feature-copy">
+            <h3>Toolbar Tab Scanner</h3>
+            <p>Provides a Chrome toolbar popup (Whop Video Saver) with a Scan tab action to manually discover and select detected video streams.</p>
+          </div>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num" aria-hidden="true">04</span>
+          <div class="feature-copy">
+            <h3>Native Chrome Downloads</h3>
+            <p>Hands off file downloads directly to Chrome's built-in Downloads manager so you can monitor progress and locate saved videos in chrome://downloads.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer><div class="wrap">Ed Lazarchuk</div></footer>
 </body>
 </html>
