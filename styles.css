@@ -931,5 +931,393 @@ body.editorial-home {
   }
 }
 
+/* ==========================================================================
+   Custom Portfolio Icons (Cards & Project Page Heroes)
+   ========================================================================== */
+
+.app-icon {
+  display: block;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.editorial-home .card-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.editorial-home .card-icon {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 34px;
+  block-size: 34px;
+  background: #F5F5F2;
+  border: 1px solid #E8E8E4;
+  border-radius: 8px;
+  color: var(--fg);
+  flex-shrink: 0;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.portfolio.editorial-home .project-card:has(.card-link:focus-visible) .card-icon {
+  color: var(--accent);
+  border-color: rgba(29, 78, 216, 0.35);
+  background: rgba(29, 78, 216, 0.06);
+}
+
+@media (hover: hover) {
+  .portfolio.editorial-home .project-card:has(.card-link:hover) .card-icon {
+    color: var(--accent);
+    border-color: rgba(29, 78, 216, 0.35);
+    background: rgba(29, 78, 216, 0.06);
+  }
+}
+
+/* Project Page Hero Kicker + Icon */
+.project-page .hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block-end: 0.85rem;
+}
+
+.project-page .hero-kicker .category {
+  margin-block-end: 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.project-page .hero-icon {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 40px;
+  block-size: 40px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Global Footer — Animated Project Switcher
+   ========================================================================== */
+
+.portfolio .global-footer {
+  margin-block-start: auto;
+  padding-block: 1.5rem max(1.5rem, env(safe-area-inset-bottom, 0px));
+  border-block-start: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--muted);
+}
+
+.portfolio .footer-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.portfolio .project-switcher {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.portfolio .switcher-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-block-size: 52px;
+  padding: 0.6rem 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 200ms ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .portfolio .switcher-item {
+    transition:
+      border-color 180ms ease,
+      color 180ms ease,
+      background-color 180ms ease,
+      box-shadow 200ms ease,
+      transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+.portfolio .switcher-icon {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 32px;
+  block-size: 32px;
+  background: #F5F5F2;
+  border: 1px solid #E8E8E4;
+  border-radius: 7px;
+  color: var(--fg);
+  flex-shrink: 0;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.portfolio .switcher-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-inline-size: 0;
+}
+
+.portfolio .switcher-num {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  color: var(--muted);
+}
+
+.portfolio .switcher-name {
+  font-size: 0.875rem;
+  font-weight: 550;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: var(--fg);
+  overflow-wrap: break-word;
+}
+
+/* Current page state (non-color indicator + cobalt highlight per WCAG 1.4.1) */
+.portfolio .switcher-item[aria-current="page"] {
+  border-color: var(--accent);
+  box-shadow:
+    inset 0 0 0 0.5px var(--accent),
+    0 4px 14px -8px rgba(29, 78, 216, 0.28);
+  color: var(--fg);
+}
+
+.portfolio .switcher-item[aria-current="page"]::after {
+  content: "";
+  margin-inline-start: auto;
+  inline-size: 6px;
+  block-size: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.portfolio .switcher-item[aria-current="page"] .switcher-icon {
+  color: var(--accent);
+  background: rgba(29, 78, 216, 0.08);
+  border-color: rgba(29, 78, 216, 0.3);
+}
+
+.portfolio .switcher-item[aria-current="page"] .switcher-num {
+  color: var(--accent);
+}
+
+.portfolio .switcher-item[aria-current="page"] .switcher-name {
+  font-weight: 650;
+  color: var(--accent);
+}
+
+.portfolio .switcher-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-color: rgba(29, 78, 216, 0.45);
+}
+
+.portfolio .switcher-item:focus-visible .switcher-icon {
+  color: var(--accent);
+  border-color: rgba(29, 78, 216, 0.35);
+  background: rgba(29, 78, 216, 0.06);
+}
+
+.portfolio .switcher-item:active {
+  border-color: rgba(29, 78, 216, 0.45);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .portfolio .switcher-item:active {
+    transform: scale(0.985);
+  }
+}
+
+@media (hover: hover) {
+  .portfolio .switcher-item:hover {
+    border-color: rgba(29, 78, 216, 0.4);
+    box-shadow: 0 8px 20px -12px rgba(17, 17, 17, 0.14);
+  }
+
+  .portfolio .switcher-item:hover .switcher-icon {
+    color: var(--accent);
+    border-color: rgba(29, 78, 216, 0.35);
+    background: rgba(29, 78, 216, 0.06);
+  }
+
+  .portfolio .switcher-item:hover .switcher-name {
+    color: var(--accent);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .portfolio .switcher-item:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.portfolio .footer-colophon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--line);
+  font-size: 0.875rem;
+}
+
+.portfolio .footer-brand {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 36px;
+  font-weight: 550;
+  color: var(--fg);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.portfolio .footer-brand:hover,
+.portfolio .footer-brand:focus-visible {
+  color: var(--accent);
+}
+
+.portfolio .footer-domain {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+@media (min-width: 680px) {
+  .portfolio .project-switcher {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+@media (forced-colors: active) {
+  .portfolio .switcher-item[aria-current="page"] {
+    outline: 2px solid Highlight;
+    outline-offset: -2px;
+  }
+
+  .portfolio .switcher-item[aria-current="page"]::after {
+    background: transparent;
+    border: 3px solid Highlight;
+  }
+}
+
+/* ==========================================================================
+   Bespoke SVG Icon Micro-Animations (opt-in under prefers-reduced-motion)
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes candle-left-pulse {
+    0%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-1.6px); }
+    75% { transform: translateY(0.8px); }
+  }
+
+  @keyframes candle-right-pulse {
+    0%, 100% { transform: translateY(0); }
+    40% { transform: translateY(1.4px); }
+    75% { transform: translateY(-1.6px); }
+  }
+
+  @keyframes trend-draw {
+    0% { stroke-dashoffset: 20; }
+    100% { stroke-dashoffset: 0; }
+  }
+
+  @keyframes kettlebell-swing {
+    0%, 100% { transform: rotate(0deg); }
+    28% { transform: rotate(-10deg); }
+    62% { transform: rotate(8deg); }
+    84% { transform: rotate(-3deg); }
+  }
+
+  @keyframes download-drop {
+    0%, 100% { transform: translateY(0); }
+    45% { transform: translateY(2.2px); }
+    75% { transform: translateY(-0.6px); }
+  }
+
+  .icon-kettlebell .kb-body {
+    transform-origin: 12px 5.5px;
+  }
+
+  /* Trigger on hover, keyboard focus-visible, active switcher item, and project hero entrance */
+  .project-card:has(.card-link:hover) .icon-candlesticks .candle-left,
+  .project-card:has(.card-link:focus-visible) .icon-candlesticks .candle-left,
+  .switcher-item:hover .icon-candlesticks .candle-left,
+  .switcher-item:focus-visible .icon-candlesticks .candle-left,
+  .switcher-item[aria-current="page"] .icon-candlesticks .candle-left,
+  .hero-icon .icon-candlesticks .candle-left {
+    animation: candle-left-pulse 640ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .project-card:has(.card-link:hover) .icon-candlesticks .candle-right,
+  .project-card:has(.card-link:focus-visible) .icon-candlesticks .candle-right,
+  .switcher-item:hover .icon-candlesticks .candle-right,
+  .switcher-item:focus-visible .icon-candlesticks .candle-right,
+  .switcher-item[aria-current="page"] .icon-candlesticks .candle-right,
+  .hero-icon .icon-candlesticks .candle-right {
+    animation: candle-right-pulse 640ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .project-card:has(.card-link:hover) .icon-trend .trend-line,
+  .project-card:has(.card-link:focus-visible) .icon-trend .trend-line,
+  .switcher-item:hover .icon-trend .trend-line,
+  .switcher-item:focus-visible .icon-trend .trend-line,
+  .switcher-item[aria-current="page"] .icon-trend .trend-line,
+  .hero-icon .icon-trend .trend-line {
+    stroke-dasharray: 20;
+    animation: trend-draw 560ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .project-card:has(.card-link:hover) .icon-kettlebell .kb-body,
+  .project-card:has(.card-link:focus-visible) .icon-kettlebell .kb-body,
+  .switcher-item:hover .icon-kettlebell .kb-body,
+  .switcher-item:focus-visible .icon-kettlebell .kb-body,
+  .switcher-item[aria-current="page"] .icon-kettlebell .kb-body,
+  .hero-icon .icon-kettlebell .kb-body {
+    animation: kettlebell-swing 660ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .project-card:has(.card-link:hover) .icon-download .dl-arrow,
+  .project-card:has(.card-link:focus-visible) .icon-download .dl-arrow,
+  .switcher-item:hover .icon-download .dl-arrow,
+  .switcher-item:focus-visible .icon-download .dl-arrow,
+  .switcher-item[aria-current="page"] .icon-download .dl-arrow,
+  .hero-icon .icon-download .dl-arrow {
+    animation: download-drop 560ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+
 
 
