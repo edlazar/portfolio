@@ -1,70 +1,441 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ed Lazarchuk | Portfolio</title>
-<meta name="description" content="Projects by Ed Lazarchuk in trading, training, and browser tools.">
-<link rel="canonical" href="https://edlazarchuk.com/">
-<link rel="stylesheet" href="/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ed Lazarchuk | Portfolio</title>
+  <meta name="description" content="Tools for trading, training, and the web — projects by Ed Lazarchuk.">
+  <link rel="canonical" href="https://edlazarchuk.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/header-dock.js" defer></script>
 </head>
-<body class="portfolio">
-<a class="skip-link" href="#main-content">Skip to content</a>
-<header><nav class="wrap" aria-label="Main navigation"><a class="brand" href="/">Ed Lazarchuk</a><a href="/#projects">Projects</a></nav></header>
-<main id="main-content" class="wrap" tabindex="-1">
-<section class="hero home-hero">
-  <h1><span class="hero-line">Tools for</span> <span class="hero-line">trading, training,</span> <span class="hero-line">and the web<span class="hero-period">.</span></span></h1>
-</section>
-<section class="work" id="projects" aria-labelledby="project-heading">
-  <h2 id="project-heading">Projects</h2>
-  <a class="project" target="_blank" rel="noopener" href="/projects/trading-strategy-research">
-    <div class="project-heading"><div><h3><span class="project-icon icon-candlesticks" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><g class="candle-a"><rect x="4.25" y="9.75" width="5" height="7"/><path d="M6.75 5.75V9.75"/><path d="M6.75 16.75V20.25"/></g><g class="candle-b"><rect x="14.75" y="6.75" width="5" height="8"/><path d="M17.25 3.75V6.75"/><path d="M17.25 14.75V18.25"/></g></svg></span><span class="project-title">Price Action Futures System</span></h3><p>A price action playbook for futures setups, risk, and execution</p></div><span class="project-arrow" aria-hidden="true">→</span></div>
-    <div class="preview research">
-      <div class="preview-title" aria-hidden="true">Price Action Futures System</div>
-      <ol class="research-workflow" aria-label="Trading workflow">
-        <li><span class="workflow-icon" aria-hidden="true">≡</span>Market Prep</li>
-        <li><span class="workflow-icon" aria-hidden="true">▥</span>Setup</li>
-        <li><span class="workflow-icon" aria-hidden="true">◇</span>Risk</li>
-        <li><span class="workflow-icon" aria-hidden="true">▷</span>Execution</li>
-      </ol>
-    </div>
-  </a>
-  <a class="project" target="_blank" rel="noopener" href="/projects/traders-dashboard">
-    <div class="project-heading"><div><h3><span class="project-icon icon-trend-monitor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="2.25" y="4.25" width="19.5" height="15.5"/><path class="trend-line" pathLength="1" d="M6.25 15.25L10.25 11.25L12.75 13.75L17.75 8.75"/></svg></span><span class="project-title">Traders Dashboard</span></h3><p>Futures trading analytics</p></div><span class="project-arrow" aria-hidden="true">→</span></div>
-    <div class="preview trading" aria-hidden="true"><div class="preview-title">Traders Dashboard</div><div class="preview-body"><div class='chart'><i></i></div><div class='data'><span>NQ · Nasdaq</span><span>ES · S&P 500</span><span>Risk Lab</span></div></div></div>
-  </a>
-  <a class="project" target="_blank" rel="noopener" href="/projects/woded">
-    <div class="project-heading"><div><h3><span class="project-icon icon-kettlebell" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M8.25 8.75V5.75A3.75 3.75 0 0 1 15.75 5.75V8.75"/><path d="M7.75 8.75H16.25L20.25 12.75V17.75L17.25 20.75H6.75L3.75 17.75V12.75Z"/><path d="M9.25 14.75H14.75"/></svg></span><span class="project-title">WODed</span></h3><p>Daily workouts, timer, and training log</p></div><span class="project-arrow" aria-hidden="true">→</span></div>
-    <div class="preview training">
-      <div class="workout-preview">
-        <strong>Short Circuit</strong>
-        <p class="workout-format">EMOM for 5 rounds</p>
-        <p>20 minutes · one station per minute</p>
-        <ol>
-          <li>15/12 calorie row</li>
-          <li>15 American KB swings (53/35)</li>
-          <li>15/10 ring dips or push-ups</li>
-          <li>Rest</li>
-        </ol>
+<body class="portfolio editorial-home">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="editorial-wrap header-bar">
+      <a class="wordmark" href="/">Ed Lazarchuk</a>
+      <div class="header-tools">
+        <span class="header-meta" aria-hidden="true">04 Tools</span>
+        <nav class="icon-dock" aria-label="Quick switch">
+          <a class="dock-btn" href="/projects/trading-strategy-research" aria-label="Price Action Futures System">
+            <svg class="app-icon icon-candlesticks" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <g class="candle-left">
+                <rect x="4.25" y="9.75" width="5" height="7"/>
+                <path d="M6.75 5.75V9.75"/>
+                <path d="M6.75 16.75V20.25"/>
+              </g>
+              <g class="candle-right">
+                <rect x="14.75" y="6.75" width="5" height="8"/>
+                <path d="M17.25 3.75V6.75"/>
+                <path d="M17.25 14.75V18.25"/>
+              </g>
+            </svg>
+          </a>
+          <a class="dock-btn" href="/projects/traders-dashboard" aria-label="Traders Dashboard">
+            <svg class="app-icon icon-trend" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <rect x="2.25" y="4.25" width="19.5" height="15.5"/>
+              <path class="trend-line" pathLength="20" d="M6.25 15.25L10.25 11.25L12.75 13.75L17.75 8.75"/>
+            </svg>
+          </a>
+          <a class="dock-btn" href="/projects/woded" aria-label="WODed">
+            <svg class="app-icon icon-kettlebell" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <g class="kb-body">
+                <path d="M8.25 8.75V5.75A3.75 3.75 0 0 1 15.75 5.75V8.75"/>
+                <path d="M7.75 8.75H16.25L20.25 12.75V17.75L17.25 20.75H6.75L3.75 17.75V12.75Z"/>
+                <path d="M9.25 14.75H14.75"/>
+              </g>
+            </svg>
+          </a>
+          <a class="dock-btn" href="/whop-downloader" aria-label="Whop Downloader">
+            <svg class="app-icon icon-download" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <path d="M3.25 14.75V20.25H20.75V14.75"/>
+              <g class="dl-arrow">
+                <path d="M12 3.25V15.25"/>
+                <path d="M7.75 11L12 15.25L16.25 11"/>
+              </g>
+            </svg>
+          </a>
+        </nav>
       </div>
     </div>
-  </a>
-  <a class="project" target="_blank" rel="noopener" href="/whop-downloader">
-    <div class="project-heading"><div><h3><span class="project-icon icon-download-tray" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M3.25 14.75V20.25H20.75V14.75"/><g class="download-arrow"><path d="M12 3.25V15.25"/><path d="M7.75 11L12 15.25L16.25 11"/></g></svg></span><span class="project-title">Whop Downloader</span></h3><p>Chrome extension</p></div><span class="project-arrow" aria-hidden="true">→</span></div>
-    <div class="preview extension" aria-hidden="true"><div class="preview-title">Whop Downloader</div><div class="preview-body"><div class='video'><span>▶</span></div><div class='data'><span>Video detected</span><span>↓ Download video</span></div></div></div>
-  </a>
-</section>
-</main>
-<footer>
-  <div class="wrap footer-inner">
-    <span>Ed Lazarchuk</span>
-    <nav class="footer-icons" aria-label="Projects">
-      <a class="footer-icon" href="/projects/trading-strategy-research" aria-label="Price Action Futures System" title="Price Action Futures System"><span class="icon-candlesticks" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><g class="candle-a"><rect x="4.25" y="9.75" width="5" height="7"/><path d="M6.75 5.75V9.75"/><path d="M6.75 16.75V20.25"/></g><g class="candle-b"><rect x="14.75" y="6.75" width="5" height="8"/><path d="M17.25 3.75V6.75"/><path d="M17.25 14.75V18.25"/></g></svg></span></a>
-      <a class="footer-icon" href="/projects/traders-dashboard" aria-label="Traders Dashboard" title="Traders Dashboard"><span class="icon-trend-monitor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="2.25" y="4.25" width="19.5" height="15.5"/><path class="trend-line" pathLength="1" d="M6.25 15.25L10.25 11.25L12.75 13.75L17.75 8.75"/></svg></span></a>
-      <a class="footer-icon" href="/projects/woded" aria-label="WODed" title="WODed"><span class="icon-kettlebell" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M8.25 8.75V5.75A3.75 3.75 0 0 1 15.75 5.75V8.75"/><path d="M7.75 8.75H16.25L20.25 12.75V17.75L17.25 20.75H6.75L3.75 17.75V12.75Z"/><path d="M9.25 14.75H14.75"/></svg></span></a>
-      <a class="footer-icon" href="/whop-downloader" aria-label="Whop Downloader" title="Whop Downloader"><span class="icon-download-tray" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M3.25 14.75V20.25H20.75V14.75"/><g class="download-arrow"><path d="M12 3.25V15.25"/><path d="M7.75 11L12 15.25L16.25 11"/></g></svg></span></a>
-    </nav>
-  </div>
-</footer>
+  </header>
+
+  <main id="main-content" class="editorial-wrap" tabindex="-1">
+    <section class="editorial-hero">
+      <h1 class="editorial-headline reveal-item" style="--reveal-delay: 0ms">Tools for trading, training, and the web.</h1>
+    </section>
+
+    <section class="projects-section" id="projects" aria-labelledby="projects-heading">
+      <div class="section-bar reveal-item" style="--reveal-delay: 70ms">
+        <h2 id="projects-heading">Selected Work</h2>
+        <span class="section-legend" aria-hidden="true">Trading · Training · Web</span>
+      </div>
+
+      <div class="project-grid">
+        <!-- 01 · Trading · Price Action Futures System -->
+        <article class="project-card reveal-item" style="--reveal-delay: 110ms">
+          <div class="media" aria-hidden="true">
+            <div class="ui-stage">
+              <div class="ui-bar">
+                <span class="ui-bar-title">4-Stage Playbook</span>
+                <span class="ui-bar-pill is-cobalt">Prep → Exec</span>
+              </div>
+              <ol class="ui-modules">
+                <li class="ui-mod is-live">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Market Prep</span>
+                    <span class="ui-dot"></span>
+                  </div>
+                  <span class="ui-mod-sub">Structure &amp; session bias</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Setup Rules</span>
+                    <span class="ui-mod-tag">02</span>
+                  </div>
+                  <span class="ui-mod-sub">Price action triggers</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Risk &amp; Sizing</span>
+                    <span class="ui-mod-stat">R:R</span>
+                  </div>
+                  <span class="ui-mod-sub">Stops &amp; contract size</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Execution Map</span>
+                    <span class="ui-mod-tag">Map</span>
+                  </div>
+                  <span class="ui-mod-sub">Interactive rulebook</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <header class="card-header">
+            <div class="card-meta-row">
+              <div class="card-meta">
+                <span class="card-index" aria-hidden="true">01</span>
+                <span class="card-category">Trading</span>
+              </div>
+              <span class="card-icon" aria-hidden="true">
+                <svg class="app-icon icon-candlesticks" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                  <g class="candle-left">
+                    <rect x="4.25" y="9.75" width="5" height="7"/>
+                    <path d="M6.75 5.75V9.75"/>
+                    <path d="M6.75 16.75V20.25"/>
+                  </g>
+                  <g class="candle-right">
+                    <rect x="14.75" y="6.75" width="5" height="8"/>
+                    <path d="M17.25 3.75V6.75"/>
+                    <path d="M17.25 14.75V18.25"/>
+                  </g>
+                </svg>
+              </span>
+            </div>
+            <h3>
+              <a class="card-link" href="/projects/trading-strategy-research">Price Action Futures System</a>
+            </h3>
+          </header>
+
+          <p class="card-desc">A step-by-step futures playbook covering market prep, setup rules, risk sizing, and trade execution inside an interactive map.</p>
+
+          <footer class="card-footer">
+            <span class="card-kind">Playbook</span>
+            <span class="card-cta" aria-hidden="true">Open <span class="cta-arrow">↗</span></span>
+          </footer>
+        </article>
+
+        <!-- 02 · Trading · Traders Dashboard -->
+        <article class="project-card reveal-item" style="--reveal-delay: 165ms">
+          <div class="media" aria-hidden="true">
+            <div class="ui-stage">
+              <div class="ui-bar">
+                <span class="ui-bar-title">4-Module Suite</span>
+                <span class="ui-bar-pill is-cobalt">Live → Recap</span>
+              </div>
+              <ol class="ui-modules">
+                <li class="ui-mod is-live">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Whop Signal Monitor</span>
+                    <span class="ui-dot"></span>
+                  </div>
+                  <span class="ui-mod-sub">Logs livestream signals</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Trades Dashboard</span>
+                    <span class="ui-mod-tag">Log</span>
+                  </div>
+                  <span class="ui-mod-sub">List of trades taken</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Risk Lab Simulator</span>
+                    <span class="ui-mod-stat">+PnL</span>
+                  </div>
+                  <span class="ui-mod-sub">Size-based gain projection</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">One-Click Recap Studio</span>
+                    <span class="ui-mod-tag">D/W/M</span>
+                  </div>
+                  <span class="ui-mod-sub">Scorecard &amp; mono post</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <header class="card-header">
+            <div class="card-meta-row">
+              <div class="card-meta">
+                <span class="card-index" aria-hidden="true">02</span>
+                <span class="card-category">Trading</span>
+              </div>
+              <span class="card-icon" aria-hidden="true">
+                <svg class="app-icon icon-trend" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                  <rect x="2.25" y="4.25" width="19.5" height="15.5"/>
+                  <path class="trend-line" pathLength="20" d="M6.25 15.25L10.25 11.25L12.75 13.75L17.75 8.75"/>
+                </svg>
+              </span>
+            </div>
+            <h3>
+              <a class="card-link" href="/projects/traders-dashboard">Traders Dashboard</a>
+            </h3>
+          </header>
+
+          <p class="card-desc">Capture Whop livestream trade signals, track every trade taken, project position-sized PnL in Risk Lab, and generate one-click D/W/M recaps.</p>
+
+          <footer class="card-footer">
+            <span class="card-kind">Trading Suite</span>
+            <span class="card-cta" aria-hidden="true">Open <span class="cta-arrow">↗</span></span>
+          </footer>
+        </article>
+
+        <!-- 03 · Training · WODed -->
+        <article class="project-card reveal-item" style="--reveal-delay: 220ms">
+          <div class="media" aria-hidden="true">
+            <div class="ui-stage">
+              <div class="ui-bar">
+                <span class="ui-bar-title">4-Module Companion</span>
+                <span class="ui-bar-pill is-cobalt">WOD → Log</span>
+              </div>
+              <ol class="ui-modules">
+                <li class="ui-mod is-live">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Daily Workouts</span>
+                    <span class="ui-dot"></span>
+                  </div>
+                  <span class="ui-mod-sub">Daily cycle WOD + past days</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Scaling Options</span>
+                    <span class="ui-mod-tag">Rx/Fx</span>
+                  </div>
+                  <span class="ui-mod-sub">Rx, Fx &amp; Scaled tracks</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Training Timers</span>
+                    <span class="ui-mod-stat">20:00</span>
+                  </div>
+                  <span class="ui-mod-sub">EMOM, AMRAP &amp; For Time</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Workout History</span>
+                    <span class="ui-mod-tag">Log</span>
+                  </div>
+                  <span class="ui-mod-sub">Scores &amp; session notes</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <header class="card-header">
+            <div class="card-meta-row">
+              <div class="card-meta">
+                <span class="card-index" aria-hidden="true">03</span>
+                <span class="card-category">Training</span>
+              </div>
+              <span class="card-icon" aria-hidden="true">
+                <svg class="app-icon icon-kettlebell" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                  <g class="kb-body">
+                    <path d="M8.25 8.75V5.75A3.75 3.75 0 0 1 15.75 5.75V8.75"/>
+                    <path d="M7.75 8.75H16.25L20.25 12.75V17.75L17.25 20.75H6.75L3.75 17.75V12.75Z"/>
+                    <path d="M9.25 14.75H14.75"/>
+                  </g>
+                </svg>
+              </span>
+            </div>
+            <h3>
+              <a class="card-link" href="/projects/woded">WODed</a>
+            </h3>
+          </header>
+
+          <p class="card-desc">A new WOD generated daily as part of a programming cycle—plus previous days to choose from, Rx/Fx/Scaled options, timers, and workout history.</p>
+
+          <footer class="card-footer">
+            <span class="card-kind">Workout App</span>
+            <span class="card-cta" aria-hidden="true">Open <span class="cta-arrow">↗</span></span>
+          </footer>
+        </article>
+
+        <!-- 04 · Web · Whop Downloader -->
+        <article class="project-card reveal-item" style="--reveal-delay: 275ms">
+          <div class="media" aria-hidden="true">
+            <div class="ui-stage">
+              <div class="ui-bar">
+                <span class="ui-bar-title">4-Step Extension</span>
+                <span class="ui-bar-pill is-cobalt">Detect → Save</span>
+              </div>
+              <ol class="ui-modules">
+                <li class="ui-mod is-live">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Stream Detection</span>
+                    <span class="ui-dot"></span>
+                  </div>
+                  <span class="ui-mod-sub">Direct video &amp; HLS</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Player Button</span>
+                    <span class="ui-mod-tag">UI</span>
+                  </div>
+                  <span class="ui-mod-sub">One-click beside player</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Tab Scanner</span>
+                    <span class="ui-mod-tag">Scan</span>
+                  </div>
+                  <span class="ui-mod-sub">Toolbar Scan tab popup</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Chrome Downloads</span>
+                    <span class="ui-mod-stat">↓ Save</span>
+                  </div>
+                  <span class="ui-mod-sub">Native browser progress</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <header class="card-header">
+            <div class="card-meta-row">
+              <div class="card-meta">
+                <span class="card-index" aria-hidden="true">04</span>
+                <span class="card-category">Web</span>
+              </div>
+              <span class="card-icon" aria-hidden="true">
+                <svg class="app-icon icon-download" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                  <path d="M3.25 14.75V20.25H20.75V14.75"/>
+                  <g class="dl-arrow">
+                    <path d="M12 3.25V15.25"/>
+                    <path d="M7.75 11L12 15.25L16.25 11"/>
+                  </g>
+                </svg>
+              </span>
+            </div>
+            <h3>
+              <a class="card-link" href="/whop-downloader">Whop Downloader</a>
+            </h3>
+          </header>
+
+          <p class="card-desc">A Chrome extension that detects supported Whop direct videos and HLS streams, injects a player download button, and saves via Chrome Downloads.</p>
+
+          <footer class="card-footer">
+            <span class="card-kind">Chrome Extension</span>
+            <span class="card-cta" aria-hidden="true">Open <span class="cta-arrow">↗</span></span>
+          </footer>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="global-footer">
+    <div class="editorial-wrap footer-shell">
+      <nav class="project-switcher" aria-label="Switch project">
+        <a class="switcher-item" href="/projects/trading-strategy-research">
+          <span class="switcher-icon" aria-hidden="true">
+            <svg class="app-icon icon-candlesticks" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+              <g class="candle-left">
+                <rect x="4.25" y="9.75" width="5" height="7"/>
+                <path d="M6.75 5.75V9.75"/>
+                <path d="M6.75 16.75V20.25"/>
+              </g>
+              <g class="candle-right">
+                <rect x="14.75" y="6.75" width="5" height="8"/>
+                <path d="M17.25 3.75V6.75"/>
+                <path d="M17.25 14.75V18.25"/>
+              </g>
+            </svg>
+          </span>
+          <span class="switcher-text">
+            <span class="switcher-num" aria-hidden="true">01</span>
+            <span class="switcher-name">Playbook</span>
+          </span>
+        </a>
+
+        <a class="switcher-item" href="/projects/traders-dashboard">
+          <span class="switcher-icon" aria-hidden="true">
+            <svg class="app-icon icon-trend" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+              <rect x="2.25" y="4.25" width="19.5" height="15.5"/>
+              <path class="trend-line" pathLength="20" d="M6.25 15.25L10.25 11.25L12.75 13.75L17.75 8.75"/>
+            </svg>
+          </span>
+          <span class="switcher-text">
+            <span class="switcher-num" aria-hidden="true">02</span>
+            <span class="switcher-name">Dashboard</span>
+          </span>
+        </a>
+
+        <a class="switcher-item" href="/projects/woded">
+          <span class="switcher-icon" aria-hidden="true">
+            <svg class="app-icon icon-kettlebell" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+              <g class="kb-body">
+                <path d="M8.25 8.75V5.75A3.75 3.75 0 0 1 15.75 5.75V8.75"/>
+                <path d="M7.75 8.75H16.25L20.25 12.75V17.75L17.25 20.75H6.75L3.75 17.75V12.75Z"/>
+                <path d="M9.25 14.75H14.75"/>
+              </g>
+            </svg>
+          </span>
+          <span class="switcher-text">
+            <span class="switcher-num" aria-hidden="true">03</span>
+            <span class="switcher-name">WODed</span>
+          </span>
+        </a>
+
+        <a class="switcher-item" href="/whop-downloader">
+          <span class="switcher-icon" aria-hidden="true">
+            <svg class="app-icon icon-download" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+              <path d="M3.25 14.75V20.25H20.75V14.75"/>
+              <g class="dl-arrow">
+                <path d="M12 3.25V15.25"/>
+                <path d="M7.75 11L12 15.25L16.25 11"/>
+              </g>
+            </svg>
+          </span>
+          <span class="switcher-text">
+            <span class="switcher-num" aria-hidden="true">04</span>
+            <span class="switcher-name">Whop</span>
+          </span>
+        </a>
+      </nav>
+
+      <div class="footer-colophon">
+        <a class="footer-brand" href="/" aria-current="page">Ed Lazarchuk</a>
+        <span class="footer-domain">edlazarchuk.com</span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

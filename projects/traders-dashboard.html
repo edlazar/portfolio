@@ -1,35 +1,248 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Traders Dashboard | Ed Lazarchuk</title>
-<meta name="description" content="A dashboard for reviewing futures trades and seeing how performance changes over time.">
-<link rel="canonical" href="https://edlazarchuk.com/projects/traders-dashboard">
-<link rel="stylesheet" href="/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Traders Dashboard | Ed Lazarchuk</title>
+  <meta name="description" content="Capture Whop livestream trade signals, log trades taken, project size-based PnL in Risk Lab Simulator, and export Daily, Weekly, and Monthly recaps in One-Click Recap Studio.">
+  <link rel="canonical" href="https://edlazarchuk.com/projects/traders-dashboard">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/header-dock.js" defer></script>
 </head>
 <body class="portfolio project-page">
-<a class="skip-link" href="#main-content">Skip to content</a>
-<header><nav class="wrap" aria-label="Main navigation"><a class="brand" href="/">Ed Lazarchuk</a><a href="/#projects">Projects</a></nav></header>
-<main id="main-content" class="wrap" tabindex="-1"><section class="hero"><p class="category">Trading performance</p><h1>Traders Dashboard</h1><p class="lead">A dashboard for reviewing futures trades and seeing how performance changes over time.</p></section>
-<section class="showcase" aria-labelledby="showcase-heading">
-  <h2 id="showcase-heading">App preview</h2>
-  <a class="showcase-link" href="https://edlazarchuk.com/dashboard">
-    <div class="preview trading" aria-hidden="true"><div class="preview-title">Traders Dashboard</div><div class="preview-body"><div class='chart'><i></i></div><div class='data'><span>NQ · Nasdaq</span><span>ES · S&P 500</span><span>Risk Lab</span></div></div></div>
-    <span class="showcase-action">Open live dashboard <span aria-hidden="true">↗</span></span>
-  </a>
-</section>
-<section class="detail" aria-labelledby="features"><h2 id="features">Features</h2><ul><li>Daily, weekly, and monthly trade summaries</li><li>Trade snapshots and performance charts</li><li>Risk Lab simulations for different position sizes</li></ul></section></main>
-<footer>
-  <div class="wrap footer-inner">
-    <span>Ed Lazarchuk</span>
-    <nav class="footer-icons" aria-label="Projects">
-      <a class="footer-icon" href="/projects/trading-strategy-research" aria-label="Price Action Futures System" title="Price Action Futures System"><span class="icon-candlesticks" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><g class="candle-a"><rect x="4.25" y="9.75" width="5" height="7"/><path d="M6.75 5.75V9.75"/><path d="M6.75 16.75V20.25"/></g><g class="candle-b"><rect x="14.75" y="6.75" width="5" height="8"/><path d="M17.25 3.75V6.75"/><path d="M17.25 14.75V18.25"/></g></svg></span></a>
-      <a class="footer-icon" href="/projects/traders-dashboard" aria-label="Traders Dashboard" title="Traders Dashboard"><span class="icon-trend-monitor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><rect x="2.25" y="4.25" width="19.5" height="15.5"/><path class="trend-line" pathLength="1" d="M6.25 15.25L10.25 11.25L12.75 13.75L17.75 8.75"/></svg></span></a>
-      <a class="footer-icon" href="/projects/woded" aria-label="WODed" title="WODed"><span class="icon-kettlebell" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M8.25 8.75V5.75A3.75 3.75 0 0 1 15.75 5.75V8.75"/><path d="M7.75 8.75H16.25L20.25 12.75V17.75L17.25 20.75H6.75L3.75 17.75V12.75Z"/><path d="M9.25 14.75H14.75"/></svg></span></a>
-      <a class="footer-icon" href="/whop-downloader" aria-label="Whop Downloader" title="Whop Downloader"><span class="icon-download-tray" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M3.25 14.75V20.25H20.75V14.75"/><g class="download-arrow"><path d="M12 3.25V15.25"/><path d="M7.75 11L12 15.25L16.25 11"/></g></svg></span></a>
-    </nav>
-  </div>
-</footer>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header>
+    <div class="wrap header-bar">
+      <a class="brand" href="/">Ed Lazarchuk</a>
+      <div class="header-tools">
+        <a class="header-projects-link" href="/#projects">Projects</a>
+        <nav class="icon-dock" aria-label="Quick switch">
+          <a class="dock-btn" href="/projects/trading-strategy-research" aria-label="Price Action Futures System">
+            <svg class="app-icon icon-candlesticks" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <g class="candle-left">
+                <rect x="4.25" y="9.75" width="5" height="7"/>
+                <path d="M6.75 5.75V9.75"/>
+                <path d="M6.75 16.75V20.25"/>
+              </g>
+              <g class="candle-right">
+                <rect x="14.75" y="6.75" width="5" height="8"/>
+                <path d="M17.25 3.75V6.75"/>
+                <path d="M17.25 14.75V18.25"/>
+              </g>
+            </svg>
+          </a>
+          <a class="dock-btn" href="/projects/traders-dashboard" aria-label="Traders Dashboard" aria-current="page">
+            <svg class="app-icon icon-trend" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <rect x="2.25" y="4.25" width="19.5" height="15.5"/>
+              <path class="trend-line" pathLength="20" d="M6.25 15.25L10.25 11.25L12.75 13.75L17.75 8.75"/>
+            </svg>
+          </a>
+          <a class="dock-btn" href="/projects/woded" aria-label="WODed">
+            <svg class="app-icon icon-kettlebell" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <g class="kb-body">
+                <path d="M8.25 8.75V5.75A3.75 3.75 0 0 1 15.75 5.75V8.75"/>
+                <path d="M7.75 8.75H16.25L20.25 12.75V17.75L17.25 20.75H6.75L3.75 17.75V12.75Z"/>
+                <path d="M9.25 14.75H14.75"/>
+              </g>
+            </svg>
+          </a>
+          <a class="dock-btn" href="/whop-downloader" aria-label="Whop Downloader">
+            <svg class="app-icon icon-download" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <path d="M3.25 14.75V20.25H20.75V14.75"/>
+              <g class="dl-arrow">
+                <path d="M12 3.25V15.25"/>
+                <path d="M7.75 11L12 15.25L16.25 11"/>
+              </g>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="wrap" tabindex="-1">
+    <section class="hero">
+      <div class="hero-kicker">
+        <span class="hero-icon" aria-hidden="true">
+          <svg class="app-icon icon-trend" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+            <rect x="2.25" y="4.25" width="19.5" height="15.5"/>
+            <path class="trend-line" pathLength="20" d="M6.25 15.25L10.25 11.25L12.75 13.75L17.75 8.75"/>
+          </svg>
+        </span>
+        <p class="category">Trading suite</p>
+      </div>
+      <h1>Traders Dashboard</h1>
+      <p class="lead">An end-to-end trading workspace that captures Whop livestream trade signals, logs every trade taken, simulates position-sized PnL in Risk Lab, and builds one-click daily, weekly, and monthly recaps.</p>
+    </section>
+
+    <section class="showcase" aria-labelledby="showcase-heading">
+      <h2 id="showcase-heading">App preview</h2>
+      <a class="showcase-link" href="https://edlazarchuk.com/dashboard">
+        <div class="suite-preview" aria-hidden="true">
+          <div class="suite-preview-head">
+            <span class="suite-preview-kicker">Traders Dashboard · 4 Core Modules</span>
+            <span class="suite-preview-pill">Signal → Log → Simulate → Recap</span>
+          </div>
+          <div class="suite-preview-grid">
+            <div class="suite-tile is-live">
+              <div class="suite-tile-head">
+                <span class="suite-tile-num">01</span>
+                <span class="suite-tile-title">Whop Signal Monitor</span>
+                <span class="suite-live-dot"></span>
+              </div>
+              <p class="suite-tile-sub">Captures &amp; logs trade signals from Whop livestream</p>
+              <div class="suite-mini-line"><span>NQ · Long · 21,420.5</span><span class="is-cobalt">Logged</span></div>
+            </div>
+
+            <div class="suite-tile">
+              <div class="suite-tile-head">
+                <span class="suite-tile-num">02</span>
+                <span class="suite-tile-title">Trades Dashboard</span>
+                <span class="suite-tile-badge">Ledger</span>
+              </div>
+              <p class="suite-tile-sub">Complete list of trades taken across sessions</p>
+              <div class="suite-mini-line"><span>NQ +2.4R · ES -1.0R · NQ +3.1R</span></div>
+            </div>
+
+            <div class="suite-tile">
+              <div class="suite-tile-head">
+                <span class="suite-tile-num">03</span>
+                <span class="suite-tile-title">Risk Lab Simulator</span>
+                <span class="suite-tile-badge is-cobalt">+PnL</span>
+              </div>
+              <p class="suite-tile-sub">Projects taken trades with simulated gains by trade size</p>
+              <div class="suite-mini-line"><span>2 Contracts</span><span class="is-cobalt">+$4,280 est.</span></div>
+            </div>
+
+            <div class="suite-tile">
+              <div class="suite-tile-head">
+                <span class="suite-tile-num">04</span>
+                <span class="suite-tile-title">One-Click Recap Studio</span>
+                <span class="suite-tile-badge">D / W / M</span>
+              </div>
+              <p class="suite-tile-sub">Daily, Weekly &amp; Monthly scorecard + monospace social post</p>
+              <div class="suite-mini-line"><code>WK 47 | 72% WR | +9.4R</code></div>
+            </div>
+          </div>
+        </div>
+        <span class="showcase-action">Open live dashboard <span aria-hidden="true">↗</span></span>
+      </a>
+    </section>
+
+    <section class="detail" aria-labelledby="features">
+      <h2 id="features">What it does</h2>
+      <ol class="feature-cards" role="list">
+        <li class="feature-item">
+          <span class="feature-num" aria-hidden="true">01</span>
+          <div class="feature-copy">
+            <h3>Whop Signal Monitor</h3>
+            <p>Captures and logs trade signals directly from Whop livestreams in real time, creating a clean timestamped record of every call without manual entry.</p>
+          </div>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num" aria-hidden="true">02</span>
+          <div class="feature-copy">
+            <h3>Trades Dashboard</h3>
+            <p>Displays a structured list of trades taken so you can review instruments, entries, exits, and outcomes across sessions at a glance.</p>
+          </div>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num" aria-hidden="true">03</span>
+          <div class="feature-copy">
+            <h3>Risk Lab Simulator</h3>
+            <p>Projects your logged trades with simulated gains based on trade size, generating estimated PnL so you can model position sizing before scaling contracts.</p>
+          </div>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num" aria-hidden="true">04</span>
+          <div class="feature-copy">
+            <h3>One-Click Recap Studio</h3>
+            <p>Builds Daily, Weekly, and Monthly performance scorecards alongside a clean monospace social post preview ready to copy and share in one click.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="global-footer">
+    <div class="wrap footer-shell">
+      <nav class="project-switcher" aria-label="Switch project">
+        <a class="switcher-item" href="/projects/trading-strategy-research">
+          <span class="switcher-icon" aria-hidden="true">
+            <svg class="app-icon icon-candlesticks" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+              <g class="candle-left">
+                <rect x="4.25" y="9.75" width="5" height="7"/>
+                <path d="M6.75 5.75V9.75"/>
+                <path d="M6.75 16.75V20.25"/>
+              </g>
+              <g class="candle-right">
+                <rect x="14.75" y="6.75" width="5" height="8"/>
+                <path d="M17.25 3.75V6.75"/>
+                <path d="M17.25 14.75V18.25"/>
+              </g>
+            </svg>
+          </span>
+          <span class="switcher-text">
+            <span class="switcher-num" aria-hidden="true">01</span>
+            <span class="switcher-name">Playbook</span>
+          </span>
+        </a>
+
+        <a class="switcher-item" href="/projects/traders-dashboard" aria-current="page">
+          <span class="switcher-icon" aria-hidden="true">
+            <svg class="app-icon icon-trend" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+              <rect x="2.25" y="4.25" width="19.5" height="15.5"/>
+              <path class="trend-line" pathLength="20" d="M6.25 15.25L10.25 11.25L12.75 13.75L17.75 8.75"/>
+            </svg>
+          </span>
+          <span class="switcher-text">
+            <span class="switcher-num" aria-hidden="true">02</span>
+            <span class="switcher-name">Dashboard</span>
+          </span>
+        </a>
+
+        <a class="switcher-item" href="/projects/woded">
+          <span class="switcher-icon" aria-hidden="true">
+            <svg class="app-icon icon-kettlebell" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+              <g class="kb-body">
+                <path d="M8.25 8.75V5.75A3.75 3.75 0 0 1 15.75 5.75V8.75"/>
+                <path d="M7.75 8.75H16.25L20.25 12.75V17.75L17.25 20.75H6.75L3.75 17.75V12.75Z"/>
+                <path d="M9.25 14.75H14.75"/>
+              </g>
+            </svg>
+          </span>
+          <span class="switcher-text">
+            <span class="switcher-num" aria-hidden="true">03</span>
+            <span class="switcher-name">WODed</span>
+          </span>
+        </a>
+
+        <a class="switcher-item" href="/whop-downloader">
+          <span class="switcher-icon" aria-hidden="true">
+            <svg class="app-icon icon-download" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+              <path d="M3.25 14.75V20.25H20.75V14.75"/>
+              <g class="dl-arrow">
+                <path d="M12 3.25V15.25"/>
+                <path d="M7.75 11L12 15.25L16.25 11"/>
+              </g>
+            </svg>
+          </span>
+          <span class="switcher-text">
+            <span class="switcher-num" aria-hidden="true">04</span>
+            <span class="switcher-name">Whop</span>
+          </span>
+        </a>
+      </nav>
+
+      <div class="footer-colophon">
+        <a class="footer-brand" href="/">Ed Lazarchuk</a>
+        <span class="footer-domain">edlazarchuk.com</span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
