@@ -89,27 +89,39 @@
           <div class="media" aria-hidden="true">
             <div class="ui-stage ui-dashboard">
               <div class="ui-bar">
-                <span class="ui-bar-title">Equity Curve</span>
-                <span class="ui-bar-stat">+14.2R</span>
+                <span class="ui-bar-title">4-Module Suite</span>
+                <span class="ui-bar-pill is-cobalt">Live → Recap</span>
               </div>
-              <svg class="ui-chart" viewBox="0 0 260 66" fill="none" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="eq-fill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#1D4ED8" stop-opacity="0.14"/>
-                    <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-                <line x1="0" y1="54" x2="260" y2="54" stroke="#E5E7EB" stroke-width="1"/>
-                <line x1="0" y1="30" x2="260" y2="30" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="3 4"/>
-                <path d="M2 54 L34 44 L62 48 L98 31 L130 35 L168 18 L200 23 L234 10 L256 12 L256 64 L2 64 Z" fill="url(#eq-fill)"/>
-                <path d="M2 54 L34 44 L62 48 L98 31 L130 35 L168 18 L200 23 L234 10 L256 12" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="256" cy="12" r="3.5" fill="#1D4ED8"/>
-              </svg>
-              <div class="ui-chips">
-                <span>NQ · Nasdaq</span>
-                <span>ES · S&amp;P 500</span>
-                <span>Risk Lab</span>
-              </div>
+              <ol class="ui-modules">
+                <li class="ui-mod is-live">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Whop Signal Monitor</span>
+                    <span class="ui-dot"></span>
+                  </div>
+                  <span class="ui-mod-sub">Logs livestream signals</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Trades Dashboard</span>
+                    <span class="ui-mod-tag">Log</span>
+                  </div>
+                  <span class="ui-mod-sub">List of trades taken</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">Risk Lab Simulator</span>
+                    <span class="ui-mod-stat">+PnL</span>
+                  </div>
+                  <span class="ui-mod-sub">Size-based gain projection</span>
+                </li>
+                <li class="ui-mod">
+                  <div class="ui-mod-top">
+                    <span class="ui-mod-name">One-Click Recap Studio</span>
+                    <span class="ui-mod-tag">D/W/M</span>
+                  </div>
+                  <span class="ui-mod-sub">Scorecard &amp; mono post</span>
+                </li>
+              </ol>
             </div>
           </div>
 
@@ -123,10 +135,10 @@
             </h3>
           </header>
 
-          <p class="card-desc">Futures trading analytics for reviewing daily performance, trade snapshots, and Risk Lab sizing simulations.</p>
+          <p class="card-desc">Capture Whop livestream trade signals, track every trade taken, project position-sized PnL in Risk Lab, and generate one-click D/W/M recaps.</p>
 
           <footer class="card-footer">
-            <span class="card-kind">Analytics</span>
+            <span class="card-kind">Trading Suite</span>
             <span class="card-cta" aria-hidden="true">Open <span class="cta-arrow">↗</span></span>
           </footer>
         </article>
