@@ -1,0 +1,20 @@
+product: Personal portfolio for Ed Lazarchuk (trading, training, and browser tools)
+personality: [crisp, technical, precise]
+sizes: [20, 24, 32]
+dir: icons
+avoid: [letters or numbers inside icons]
+
+# Baked into every drawing: changing it means redrawing every icon (stroke: re-lint and fix instead).
+dna:
+  style: outline
+  stroke: 1.5
+  grid: 24
+  padding: 1
+  keylines: { circle: 20, square: 18, portrait: [16, 20], landscape: [20, 16] }
+  corners: { family: sharp, radius: { large: 0, small: 0 }, largeThreshold: 8 }
+  caps: square
+  joins: miter
+  angles: [0, 45, 90]
+  detail: low
+  minGap: 2
+  badge: { position: bottom-right, size: 8, gap: 2 }
